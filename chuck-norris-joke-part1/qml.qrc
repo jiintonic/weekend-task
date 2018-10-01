@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Background.qml</file>
+        <file>BackgroundForm.ui.qml</file>
+        <file>JokeButton.qml</file>
+        <file>JokeButtonForm.ui.qml</file>
+    </qresource>
+</RCC>
