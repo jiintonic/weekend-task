@@ -1,0 +1,47 @@
+/* file "EmptyObjectJSON.cpp" */
+
+/* Generated automatically by Classy JSON. */
+
+
+#pragma implementation "EmptyObjectJSON.h"
+
+#include "EmptyObjectJSON.h"
+
+
+EmptyObjectJSON::EmptyObjectJSON(const EmptyObjectJSON &)
+  {
+    assert(false);
+  }
+
+EmptyObjectJSON &EmptyObjectJSON::operator=(const EmptyObjectJSON &other)
+  {
+    assert(false);
+    throw "Illegal operator=() call.";
+  }
+
+EmptyObjectJSON::EmptyObjectJSON(void)
+  {
+    extraIndex = create_string_index();
+  }
+
+EmptyObjectJSON::~EmptyObjectJSON(void)
+  {
+    size_t extra_count = extraValues.size();
+    for (size_t extra_num = 0; extra_num < extra_count; ++extra_num)
+        extraValues[extra_num]->remove_reference();
+        destroy_string_index(extraIndex);
+  }
+
+EmptyObjectJSON *EmptyObjectJSON::from_json(JSONValue *json_value, bool ignore_extras)
+  {
+    EmptyObjectJSON *result;
+      {
+        JSONHoldingGenerator<Generator, RCHandle<EmptyObjectJSON>, EmptyObjectJSON *, bool> generator("Type EmptyObject", ignore_extras);
+        json_value->write(&generator);
+        assert(generator.have_value);
+        result = generator.value.referenced();
+        result->add_reference();
+      };
+    result->remove_reference_no_delete();
+    return result;
+  }

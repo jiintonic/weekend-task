@@ -1,0 +1,52 @@
+/* file "ShowCallHistoryCommandJSON.cpp" */
+
+/* Generated automatically by Classy JSON. */
+
+
+#pragma implementation "ShowCallHistoryCommandJSON.h"
+
+#include "ShowCallHistoryCommandJSON.h"
+
+
+ShowCallHistoryCommandJSON::ShowCallHistoryCommandJSON(const ShowCallHistoryCommandJSON &)
+  {
+    assert(false);
+  }
+
+ShowCallHistoryCommandJSON &ShowCallHistoryCommandJSON::operator=(const ShowCallHistoryCommandJSON &other)
+  {
+    assert(false);
+    throw "Illegal operator=() call.";
+  }
+
+ShowCallHistoryCommandJSON::ShowCallHistoryCommandJSON(void)
+  {
+    extraIndex = create_string_index();
+  }
+
+ShowCallHistoryCommandJSON::~ShowCallHistoryCommandJSON(void)
+  {
+    size_t extra_count = extraValues.size();
+    for (size_t extra_num = 0; extra_num < extra_count; ++extra_num)
+        extraValues[extra_num]->remove_reference();
+        destroy_string_index(extraIndex);
+  }
+
+const char *ShowCallHistoryCommandJSON::getPhoneCommandKind(void) const
+  {
+    return "ShowCallHistory";
+  }
+
+ShowCallHistoryCommandJSON *ShowCallHistoryCommandJSON::from_json(JSONValue *json_value, bool ignore_extras)
+  {
+    ShowCallHistoryCommandJSON *result;
+      {
+        JSONHoldingGenerator<Generator, RCHandle<ShowCallHistoryCommandJSON>, ShowCallHistoryCommandJSON *, bool> generator("Type ShowCallHistoryCommand", ignore_extras);
+        json_value->write(&generator);
+        assert(generator.have_value);
+        result = generator.value.referenced();
+        result->add_reference();
+      };
+    result->remove_reference_no_delete();
+    return result;
+  }
