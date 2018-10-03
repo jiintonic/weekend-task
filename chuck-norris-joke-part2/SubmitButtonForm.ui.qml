@@ -21,7 +21,8 @@ Item {
             y: 44
             width: 318
             height: 48
-            text: qsTr("Request a Chuck Norris Joke")
+            text: qsTr("Submit")
+            horizontalAlignment: Text.AlignHCenter
             font.bold: true
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter

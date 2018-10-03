@@ -15,25 +15,38 @@ Window {
 
         JokeRequest{
             id:jokeRequest
-            onJokeReadReady:{
-                display.text = joke;
+            onServerResponse:{
+                display.text = response;
             }
         }
 
-        JokeButton {
-            id: jokeButton
-            x: 171
-            y: 310
-            anchors.horizontalCenterOffset: -7
-            anchors.horizontalCenter: parent.horizontalCenter
-
+        SubmitButton {
+            id: submitButton1
+            x: 145
+            y: 306
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    jokeRequest.makeRequest();
-                    display.text = jokeRequest.makeHoundifyRequest();
+                    jokeRequest.makeHoundifyRequest(textEdit.text);
                 }
             }
+        }
+
+        TextEdit {
+            id: textEdit
+            x: 78
+            y: 31
+            width: 484
+            height: 41
+            text: qsTr("Ask SoundHound a Question")
+            font.capitalization: Font.Capitalize
+            font.bold: true
+            font.family: "Tahoma"
+            renderType: Text.NativeRendering
+            selectionColor: "#800000"
+            textFormat: Text.AutoText
+            opacity: 1
+            font.pixelSize: 20
         }
 
         Text {

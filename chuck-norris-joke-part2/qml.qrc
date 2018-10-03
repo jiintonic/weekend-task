@@ -3,7 +3,7 @@
         <file>main.qml</file>
         <file>Background.qml</file>
         <file>BackgroundForm.ui.qml</file>
-        <file>JokeButton.qml</file>
-        <file>JokeButtonForm.ui.qml</file>
+        <file>SubmitButton.qml</file>
+        <file>SubmitButtonForm.ui.qml</file>
     </qresource>
 </RCC>

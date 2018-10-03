@@ -11,24 +11,25 @@
 #include <QJsonObject>
 #include <QJsonValue>
 #include "HoundServerJSON.h"
+#include "HoundCloudRequester.h"
 
 class JokeRequest : public QObject
 {
     Q_OBJECT
 public:
     explicit JokeRequest(QObject *parent = nullptr);
-    Q_INVOKABLE void makeRequest();
-    Q_INVOKABLE QString makeHoundifyRequest();
+    Q_INVOKABLE void makeHoundifyRequest(QString request);
 
 signals:
-    void jokeReadReady(QString joke);
+    void serverResponse(QString response);
 
 public slots:
     void readReady(QNetworkReply *reply);
 
 private:
     QNetworkAccessManager *mNetMan;
-    void show_diagnostics(CommandResultJSON *command);
+    HoundCloudRequester* mRequester;
+    void makeJokeRequest();
 };
 
 #endif // JOKEREQUEST_H
