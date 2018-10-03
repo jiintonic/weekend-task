@@ -32,6 +32,7 @@ private:
     HoundCloudRequester* mRequester;
     void makeJokeRequest();
     RequestInfoJSON* getRequestInfo();
+    void sendResponse(HoundServerJSON *hound_result);
 };
 
 #endif // JOKEREQUEST_H

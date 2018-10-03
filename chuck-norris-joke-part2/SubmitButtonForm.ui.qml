@@ -21,7 +21,7 @@ Item {
             y: 44
             width: 318
             height: 48
-            text: qsTr("Submit")
+            text: qsTr("Submit Text Request")
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
             anchors.horizontalCenter: parent.horizontalCenter

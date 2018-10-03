@@ -1,4 +1,4 @@
-QT += quick network
+QT += quick network multimedia
 CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use
@@ -31,7 +31,8 @@ INCLUDEPATH += \
 
 SOURCES += \
     jokerequest.cpp \
-    main.cpp
+    main.cpp \
+    audiorecorder.cpp \
 
 RESOURCES += qml.qrc \
     background-img.qrc
@@ -49,6 +50,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     jokerequest.h \
+    audiorecorder.h
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../chuck-norris-joke-part2/HoundCpp/c_foundations/release/ -lc_foundations
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../chuck-norris-joke-part2/HoundCpp/c_foundations/debug/ -lc_foundations

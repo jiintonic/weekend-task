@@ -2,6 +2,7 @@ import QtQuick 2.10
 import QtQuick.Window 2.10
 import QtQuick.Dialogs 1.0
 import com.mbrdna.joke 1.0
+import com.mbrdna.audio.record 1.0
 
 Window {
     visible: true
@@ -21,20 +22,26 @@ Window {
             }
         }
 
+        AudioRecorder{
+            id:audiorecorder
+        }
+
         SubmitButton {
-            id: submitButton1
+            id: submitButton
             x: 0
             y: 310
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
                     jokeRequest.makeHoundifyTextRequest(textEdit.text);
+//                    audiorecorder.start()
+//                    console.log("recording starts")
                 }
             }
         }
 
-        RecordButton {
-            id: recordButton
+        SelectButton {
+            id: selectButton
             x: 320
             y: 310
             width: 320
@@ -42,6 +49,10 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                    fileDialog.open();
+//                 audiorecorder.stop()
+//                 console.log("recording stops")
+//                 console.log("audio file can be found at: " + audiorecorder.getFilePath())
+//                 jokeRequest.makeHoundifyVoiceRequest(audiorecorder.getFilePath());
                 }
             }
         }
@@ -73,7 +84,6 @@ Window {
                 close
             }
             onRejected: {
-                console.log("Canceled")
                 close
             }
             visible: false

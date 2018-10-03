@@ -2,31 +2,27 @@ import QtQuick 2.4
 
 Item {
     id: item1
-    width: 320
-    height: 118
+    width: 100
+    height: 50
 
     Rectangle {
         id: button
         x: 25
         y: 184
-        width: 320
-        height: 118
-        color: "#66f61d"
+        width: 100
+        height: 50
+        color: "#8af61d"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
 
         Text {
             id: display
-            x: 8
-            y: 44
-            width: 318
-            height: 48
-            text: qsTr("Record")
+            text: "Record"
+            verticalAlignment: Text.AlignVCenter
+            anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
-            lineHeight: 0.4
+            lineHeight: 0
             elide: Text.ElideMiddle
             font.pixelSize: 24
         }

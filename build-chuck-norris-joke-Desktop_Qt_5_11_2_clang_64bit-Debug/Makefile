@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_MULTIMEDIA_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.11 -Wall -W -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -g -std=gnu++11 $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.11 -Wall -W -fPIC $(DEFINES)
-INCPATH       = -I../chuck-norris-joke-part2 -I. -I../chuck-norris-joke-part2/HoundCpp -I../chuck-norris-joke-part2/HoundCpp/c_foundations -I../chuck-norris-joke-part2/HoundCpp/Utilities -I../chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I../chuck-norris-joke-part2/HoundCpp/Common -I../chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I../chuck-norris-joke-part2/HoundCpp/HoundConverser -I../chuck-norris-joke-part2/HoundCpp/HoundJSON -I../chuck-norris-joke-part2/HoundCpp/HoundRequester -I../chuck-norris-joke-part2/HoundCpp/HTTP -I../chuck-norris-joke-part2/HoundCpp/JSON -I../chuck-norris-joke-part2/HoundCpp/Numbers -I../chuck-norris-joke-part2/HoundCpp/ReferenceCounting -I../chuck-norris-joke-part2/HoundCpp/SalmonEye -I../chuck-norris-joke-part2/HoundCpp/SharedArray -I../chuck-norris-joke-part2/HoundCpp/c_foundations -I../chuck-norris-joke-part2/HoundCpp/HoundRequester -I../chuck-norris-joke-part2/HoundCpp/Utilities -I../chuck-norris-joke-part2/HoundCpp/JSON -I../chuck-norris-joke-part2/HoundCpp/HoundJSON -I/usr/local/Cellar/openssl/1.0.2o_1/include -I../chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I../chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I../chuck-norris-joke-part2/HoundCpp/HoundConverser -I../chuck-norris-joke-part2/HoundCpp/Numbers -I/../usr/local/Cellar/openssl/1.0.2o_1/include -I../chuck-norris-joke-part2/HoundCpp/SalmonEye -I../../../Qt/5.11.2/clang_64/lib/QtQuick.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtGui.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtQml.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../Qt/5.11.2/clang_64/mkspecs/macx-clang -F/Users/yangchi/Qt/5.11.2/clang_64/lib
+INCPATH       = -I../chuck-norris-joke-part2 -I. -I../chuck-norris-joke-part2/HoundCpp -I../chuck-norris-joke-part2/HoundCpp/c_foundations -I../chuck-norris-joke-part2/HoundCpp/Utilities -I../chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I../chuck-norris-joke-part2/HoundCpp/Common -I../chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I../chuck-norris-joke-part2/HoundCpp/HoundConverser -I../chuck-norris-joke-part2/HoundCpp/HoundJSON -I../chuck-norris-joke-part2/HoundCpp/HoundRequester -I../chuck-norris-joke-part2/HoundCpp/HTTP -I../chuck-norris-joke-part2/HoundCpp/JSON -I../chuck-norris-joke-part2/HoundCpp/Numbers -I../chuck-norris-joke-part2/HoundCpp/ReferenceCounting -I../chuck-norris-joke-part2/HoundCpp/SalmonEye -I../chuck-norris-joke-part2/HoundCpp/SharedArray -I../chuck-norris-joke-part2/HoundCpp/c_foundations -I../chuck-norris-joke-part2/HoundCpp/HoundRequester -I../chuck-norris-joke-part2/HoundCpp/Utilities -I../chuck-norris-joke-part2/HoundCpp/JSON -I../chuck-norris-joke-part2/HoundCpp/HoundJSON -I/usr/local/Cellar/openssl/1.0.2o_1/include -I../chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I../chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I../chuck-norris-joke-part2/HoundCpp/HoundConverser -I../chuck-norris-joke-part2/HoundCpp/Numbers -I/../usr/local/Cellar/openssl/1.0.2o_1/include -I../chuck-norris-joke-part2/HoundCpp/SalmonEye -I../../../Qt/5.11.2/clang_64/lib/QtQuick.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtGui.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtQml.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers -I../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../Qt/5.11.2/clang_64/mkspecs/macx-clang -F/Users/yangchi/Qt/5.11.2/clang_64/lib
 QMAKE         = /Users/yangchi/Qt/5.11.2/clang_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = chuck-norris-joke1.0.0
 DISTDIR = /Users/yangchi/Documents/weekend-task/build-chuck-norris-joke-Desktop_Qt_5_11_2_clang_64bit-Debug/.tmp/chuck-norris-joke1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.11 -Wl,-rpath,@executable_path/Frameworks -Wl,-rpath,/Users/yangchi/Qt/5.11.2/clang_64/lib
-LIBS          = $(SUBLIBS) -F/Users/yangchi/Qt/5.11.2/clang_64/lib -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/c_foundations/ -lc_foundations -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester/ -lhoundrequester -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities/ -lutilities -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/JSON/ -ljson_library -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/HoundJSON/ -lhoundjson -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/ -lssl -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever/ -lGoldenRetriever -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry/ -lclientcapabilityregistry -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser/ -lhoundconverser -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers/ -lnumbers -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/ -lcrypto -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye/ -lSalmonEye -framework QtQuick -framework QtQml -framework QtNetwork -framework QtCore -framework DiskArbitration -framework IOKit -framework QtGui -framework OpenGL -framework AGL 
+LIBS          = $(SUBLIBS) -F/Users/yangchi/Qt/5.11.2/clang_64/lib -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/c_foundations/ -lc_foundations -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester/ -lhoundrequester -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities/ -lutilities -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/JSON/ -ljson_library -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../chuck-norris-joke-part2/HoundCpp/HoundJSON/ -lhoundjson -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/ -lssl -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever/ -lGoldenRetriever -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry/ -lclientcapabilityregistry -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser/ -lhoundconverser -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers/ -lnumbers -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/../../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/ -lcrypto -L/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye/ -lSalmonEye -framework QtQuick -framework QtQml -framework QtNetwork -framework QtCore -framework DiskArbitration -framework IOKit -framework QtGui -framework QtMultimedia -framework OpenGL -framework AGL 
 AR            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar cq
 RANLIB        = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -s
 SED           = sed
@@ -51,14 +51,18 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../chuck-norris-joke-part2/jokerequest.cpp \
-		../chuck-norris-joke-part2/main.cpp qrc_qml.cpp \
+		../chuck-norris-joke-part2/main.cpp \
+		../chuck-norris-joke-part2/audiorecorder.cpp qrc_qml.cpp \
 		qrc_background-img.cpp \
-		moc_jokerequest.cpp
+		moc_jokerequest.cpp \
+		moc_audiorecorder.cpp
 OBJECTS       = jokerequest.o \
 		main.o \
+		audiorecorder.o \
 		qrc_qml.o \
 		qrc_background-img.o \
-		moc_jokerequest.o
+		moc_jokerequest.o \
+		moc_audiorecorder.o
 DIST          = ../../../Qt/5.11.2/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.11.2/clang_64/mkspecs/qdevice.pri \
 		../../../Qt/5.11.2/clang_64/mkspecs/features/device_config.prf \
@@ -247,8 +251,10 @@ DIST          = ../../../Qt/5.11.2/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.11.2/clang_64/mkspecs/features/exceptions.prf \
 		../../../Qt/5.11.2/clang_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.11.2/clang_64/mkspecs/features/lex.prf \
-		../chuck-norris-joke-part2/chuck-norris-joke.pro ../chuck-norris-joke-part2/jokerequest.h ../chuck-norris-joke-part2/jokerequest.cpp \
-		../chuck-norris-joke-part2/main.cpp
+		../chuck-norris-joke-part2/chuck-norris-joke.pro ../chuck-norris-joke-part2/jokerequest.h \
+		../chuck-norris-joke-part2/audiorecorder.h ../chuck-norris-joke-part2/jokerequest.cpp \
+		../chuck-norris-joke-part2/main.cpp \
+		../chuck-norris-joke-part2/audiorecorder.cpp
 QMAKE_TARGET  = chuck-norris-joke
 DESTDIR       = 
 TARGET        = chuck-norris-joke.app/Contents/MacOS/chuck-norris-joke
@@ -461,6 +467,7 @@ Makefile: ../chuck-norris-joke-part2/chuck-norris-joke.pro ../../../Qt/5.11.2/cl
 		../chuck-norris-joke-part2/qml.qrc \
 		../chuck-norris-joke-part2/background-img.qrc \
 		../../../Qt/5.11.2/clang_64/lib/QtQuick.framework/QtQuick.prl \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/QtMultimedia.prl \
 		../../../Qt/5.11.2/clang_64/lib/QtGui.framework/QtGui.prl \
 		../../../Qt/5.11.2/clang_64/lib/QtQml.framework/QtQml.prl \
 		../../../Qt/5.11.2/clang_64/lib/QtNetwork.framework/QtNetwork.prl \
@@ -658,6 +665,7 @@ Makefile: ../chuck-norris-joke-part2/chuck-norris-joke.pro ../../../Qt/5.11.2/cl
 ../chuck-norris-joke-part2/qml.qrc:
 ../chuck-norris-joke-part2/background-img.qrc:
 ../../../Qt/5.11.2/clang_64/lib/QtQuick.framework/QtQuick.prl:
+../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/QtMultimedia.prl:
 ../../../Qt/5.11.2/clang_64/lib/QtGui.framework/QtGui.prl:
 ../../../Qt/5.11.2/clang_64/lib/QtQml.framework/QtQml.prl:
 ../../../Qt/5.11.2/clang_64/lib/QtNetwork.framework/QtNetwork.prl:
@@ -693,8 +701,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../chuck-norris-joke-part2/qml.qrc ../chuck-norris-joke-part2/background-img.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/5.11.2/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../chuck-norris-joke-part2/jokerequest.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../chuck-norris-joke-part2/jokerequest.cpp ../chuck-norris-joke-part2/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../chuck-norris-joke-part2/jokerequest.h ../chuck-norris-joke-part2/audiorecorder.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../chuck-norris-joke-part2/jokerequest.cpp ../chuck-norris-joke-part2/main.cpp ../chuck-norris-joke-part2/audiorecorder.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -724,12 +732,16 @@ compiler_rcc_clean:
 qrc_qml.cpp: ../chuck-norris-joke-part2/qml.qrc \
 		../../../Qt/5.11.2/clang_64/bin/rcc \
 		../chuck-norris-joke-part2/BackgroundForm.ui.qml \
+		../chuck-norris-joke-part2/StopButton.qml \
+		../chuck-norris-joke-part2/SelectButton.qml \
 		../chuck-norris-joke-part2/RecordButton.qml \
 		../chuck-norris-joke-part2/SubmitButtonForm.ui.qml \
 		../chuck-norris-joke-part2/RecordButtonForm.ui.qml \
 		../chuck-norris-joke-part2/SubmitButton.qml \
+		../chuck-norris-joke-part2/SelectButtonForm.ui.qml \
 		../chuck-norris-joke-part2/Background.qml \
-		../chuck-norris-joke-part2/main.qml
+		../chuck-norris-joke-part2/main.qml \
+		../chuck-norris-joke-part2/StopButtonForm.ui.qml
 	/Users/yangchi/Qt/5.11.2/clang_64/bin/rcc -name qml ../chuck-norris-joke-part2/qml.qrc -o qrc_qml.cpp
 
 qrc_background-img.cpp: ../chuck-norris-joke-part2/background-img.qrc \
@@ -743,9 +755,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: ../../../Qt/5.11.2/clang_64/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++11 $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.11 -Wall -W -dM -E -o moc_predefs.h ../../../Qt/5.11.2/clang_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_jokerequest.cpp
+compiler_moc_header_make_all: moc_jokerequest.cpp moc_audiorecorder.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_jokerequest.cpp
+	-$(DEL_FILE) moc_jokerequest.cpp moc_audiorecorder.cpp
 moc_jokerequest.cpp: ../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QObject \
 		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		../../../Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
@@ -878,7 +890,26 @@ moc_jokerequest.cpp: ../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QO
 		../chuck-norris-joke-part2/jokerequest.h \
 		moc_predefs.h \
 		../../../Qt/5.11.2/clang_64/bin/moc
-	/Users/yangchi/Qt/5.11.2/clang_64/bin/moc $(DEFINES) --include /Users/yangchi/Documents/weekend-task/build-chuck-norris-joke-Desktop_Qt_5_11_2_clang_64bit-Debug/moc_predefs.h -I/Users/yangchi/Qt/5.11.2/clang_64/mkspecs/macx-clang -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2 -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Common -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HTTP -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ReferenceCounting -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SharedArray -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/../usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQuick.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtGui.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQml.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/yangchi/Qt/5.11.2/clang_64/lib ../chuck-norris-joke-part2/jokerequest.h -o moc_jokerequest.cpp
+	/Users/yangchi/Qt/5.11.2/clang_64/bin/moc $(DEFINES) --include /Users/yangchi/Documents/weekend-task/build-chuck-norris-joke-Desktop_Qt_5_11_2_clang_64bit-Debug/moc_predefs.h -I/Users/yangchi/Qt/5.11.2/clang_64/mkspecs/macx-clang -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2 -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Common -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HTTP -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ReferenceCounting -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SharedArray -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/../usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQuick.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtGui.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQml.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/yangchi/Qt/5.11.2/clang_64/lib ../chuck-norris-joke-part2/jokerequest.h -o moc_jokerequest.cpp
+
+moc_audiorecorder.cpp: ../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QAudioRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qaudiorecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmediarecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMultimedia \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmultimedia.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFileInfo \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFile \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfile.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QUrl \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qurl.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QDir \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qdir.h \
+		../chuck-norris-joke-part2/audiorecorder.h \
+		moc_predefs.h \
+		../../../Qt/5.11.2/clang_64/bin/moc
+	/Users/yangchi/Qt/5.11.2/clang_64/bin/moc $(DEFINES) --include /Users/yangchi/Documents/weekend-task/build-chuck-norris-joke-Desktop_Qt_5_11_2_clang_64bit-Debug/moc_predefs.h -I/Users/yangchi/Qt/5.11.2/clang_64/mkspecs/macx-clang -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2 -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Common -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HTTP -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ReferenceCounting -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SharedArray -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/c_foundations -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundRequester -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Utilities -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/JSON -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundJSON -I/usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/GoldenRetriever -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/ClientCapabilityRegistry -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/HoundConverser -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/Numbers -I/../usr/local/Cellar/openssl/1.0.2o_1/include -I/Users/yangchi/Documents/weekend-task/chuck-norris-joke-part2/HoundCpp/SalmonEye -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQuick.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtGui.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtQml.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/yangchi/Qt/5.11.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/yangchi/Qt/5.11.2/clang_64/lib ../chuck-norris-joke-part2/audiorecorder.h -o moc_audiorecorder.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1212,8 +1243,40 @@ main.o: ../chuck-norris-joke-part2/main.cpp ../../../Qt/5.11.2/clang_64/lib/QtGu
 		../chuck-norris-joke-part2/HoundCpp/c_foundations/buffer_print.h \
 		../chuck-norris-joke-part2/HoundCpp/c_foundations/auto_array.h \
 		../chuck-norris-joke-part2/HoundCpp/GoldenRetriever/GoldenRetriever.h \
-		../chuck-norris-joke-part2/HoundCpp/GoldenRetriever/FetchEnable.h
+		../chuck-norris-joke-part2/HoundCpp/GoldenRetriever/FetchEnable.h \
+		../chuck-norris-joke-part2/audiorecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QAudioRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qaudiorecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmediarecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMultimedia \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmultimedia.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFileInfo \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFile \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfile.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QUrl \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qurl.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QDir \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../chuck-norris-joke-part2/main.cpp
+
+audiorecorder.o: ../chuck-norris-joke-part2/audiorecorder.cpp ../chuck-norris-joke-part2/audiorecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QAudioRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qaudiorecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaRecorder \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmediarecorder.h \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/QMultimedia \
+		../../../Qt/5.11.2/clang_64/lib/QtMultimedia.framework/Headers/qmultimedia.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFileInfo \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QFile \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qfile.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QUrl \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qurl.h \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/QDir \
+		../../../Qt/5.11.2/clang_64/lib/QtCore.framework/Headers/qdir.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o audiorecorder.o ../chuck-norris-joke-part2/audiorecorder.cpp
 
 qrc_qml.o: qrc_qml.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_qml.o qrc_qml.cpp
@@ -1223,6 +1286,9 @@ qrc_background-img.o: qrc_background-img.cpp
 
 moc_jokerequest.o: moc_jokerequest.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_jokerequest.o moc_jokerequest.cpp
+
+moc_audiorecorder.o: moc_audiorecorder.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_audiorecorder.o moc_audiorecorder.cpp
 
 ####### Install
 

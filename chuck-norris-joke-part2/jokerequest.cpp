@@ -59,10 +59,8 @@ RequestInfoJSON *JokeRequest::getRequestInfo()
     return request_info;
 }
 
-void JokeRequest::makeHoundifyTextRequest(QString line)
+void JokeRequest::sendResponse(HoundServerJSON *hound_result)
 {
-    init_salmoneye();
-    HoundServerJSON *hound_result = mRequester->do_text_request(line.toStdString().c_str(), nullptr, getRequestInfo(), nullptr);
     if(hound_result != nullptr && hound_result->hasAllResults()){
         CommandResultJSON *command = hound_result->elementOfAllResults(0);
         const char* soundHoundRespond = command->getWrittenResponse().c_str();
@@ -75,6 +73,13 @@ void JokeRequest::makeHoundifyTextRequest(QString line)
     } else{
         emit serverResponse(ERROR_MESSAGE);
     }
+}
+
+void JokeRequest::makeHoundifyTextRequest(QString line)
+{
+    init_salmoneye();
+    HoundServerJSON *hound_result = mRequester->do_text_request(line.toStdString().c_str(), nullptr, getRequestInfo(), nullptr);
+    sendResponse(hound_result);
     cleanup_salmoneye();
 }
 
@@ -99,13 +104,7 @@ void JokeRequest::makeHoundifyVoiceRequest(QString filename)
         }
         fclose(audio_fp);
         HoundServerJSON *hound_result = request->finish();
-        if(hound_result != nullptr && hound_result->hasAllResults()){
-            CommandResultJSON *command = hound_result->elementOfAllResults(0);
-            const char* soundHoundRespond = command->getWrittenResponse().c_str();
-            emit serverResponse(soundHoundRespond);
-        } else{
-            emit serverResponse(ERROR_MESSAGE);
-        }
+        sendResponse(hound_result);
     }
     cleanup_salmoneye();
 }
