@@ -50,19 +50,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     jokerequest.h \
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/HoundCpp/SalmonEye/release/ -lSalmonEye
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/HoundCpp/SalmonEye/debug/ -lSalmonEye
-else:unix: LIBS += -L$$PWD/HoundCpp/SalmonEye/ -lSalmonEye
-
-INCLUDEPATH += $$PWD/HoundCpp/SalmonEye
-DEPENDPATH += $$PWD/HoundCpp/SalmonEye
-
-win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/release/libSalmonEye.a
-else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/debug/libSalmonEye.a
-else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/release/SalmonEye.lib
-else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/debug/SalmonEye.lib
-else:unix: PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/libSalmonEye.a
-
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../chuck-norris-joke-part2/HoundCpp/c_foundations/release/ -lc_foundations
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../chuck-norris-joke-part2/HoundCpp/c_foundations/debug/ -lc_foundations
 else:unix: LIBS += -L$$PWD/../chuck-norris-joke-part2/HoundCpp/c_foundations/ -lc_foundations
@@ -206,3 +193,16 @@ else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../..
 else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/release/crypto.lib
 else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/debug/crypto.lib
 else:unix: PRE_TARGETDEPS += $$PWD/../../../../../../usr/local/Cellar/openssl/1.0.2o_1/lib/libcrypto.a
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/HoundCpp/SalmonEye/release/ -lSalmonEye
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/HoundCpp/SalmonEye/debug/ -lSalmonEye
+else:unix: LIBS += -L$$PWD/HoundCpp/SalmonEye/ -lSalmonEye
+
+INCLUDEPATH += $$PWD/HoundCpp/SalmonEye
+DEPENDPATH += $$PWD/HoundCpp/SalmonEye
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/release/libSalmonEye.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/debug/libSalmonEye.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/release/SalmonEye.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/debug/SalmonEye.lib
+else:unix: PRE_TARGETDEPS += $$PWD/HoundCpp/SalmonEye/libSalmonEye.a

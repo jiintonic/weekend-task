@@ -2,14 +2,14 @@ import QtQuick 2.4
 
 Item {
     id: item1
-    width: 350
+    width: 320
     height: 118
 
     Rectangle {
         id: button
         x: 25
         y: 184
-        width: 350
+        width: 320
         height: 118
         color: "#f51c1c"
         anchors.horizontalCenter: parent.horizontalCenter

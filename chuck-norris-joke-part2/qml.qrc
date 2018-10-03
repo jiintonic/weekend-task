@@ -5,5 +5,7 @@
         <file>BackgroundForm.ui.qml</file>
         <file>SubmitButton.qml</file>
         <file>SubmitButtonForm.ui.qml</file>
+        <file>RecordButton.qml</file>
+        <file>RecordButtonForm.ui.qml</file>
     </qresource>
 </RCC>

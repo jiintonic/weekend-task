@@ -1,5 +1,6 @@
 import QtQuick 2.10
 import QtQuick.Window 2.10
+import QtQuick.Dialogs 1.0
 import com.mbrdna.joke 1.0
 
 Window {
@@ -22,12 +23,25 @@ Window {
 
         SubmitButton {
             id: submitButton1
-            x: 145
-            y: 306
+            x: 0
+            y: 310
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    jokeRequest.makeHoundifyRequest(textEdit.text);
+                    jokeRequest.makeHoundifyTextRequest(textEdit.text);
+                }
+            }
+        }
+
+        RecordButton {
+            id: recordButton
+            x: 320
+            y: 310
+            width: 320
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                   fileDialog.open();
                 }
             }
         }
@@ -47,6 +61,22 @@ Window {
             textFormat: Text.AutoText
             opacity: 1
             font.pixelSize: 20
+        }
+
+        FileDialog {
+            id: fileDialog
+            title: "Please choose a file"
+            folder: shortcuts.home
+            nameFilters: [ "Audio files(*.wav *.opus *.speez)"]
+            onAccepted: {
+                jokeRequest.makeHoundifyVoiceRequest(fileUrls);
+                close
+            }
+            onRejected: {
+                console.log("Canceled")
+                close
+            }
+            visible: false
         }
 
         Text {

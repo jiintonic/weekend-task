@@ -30,9 +30,8 @@ void JokeRequest::makeJokeRequest()
     mNetMan->get(QNetworkRequest(CHUCK_NORRIS_JOKE_URL));
 }
 
-void JokeRequest::makeHoundifyRequest(QString line)
+RequestInfoJSON *JokeRequest::getRequestInfo()
 {
-    init_salmoneye();
     RequestInfoJSON *request_info = new RequestInfoJSON();
     char session_id[41];
     for (size_t num = 0; num < 10; ++num)
@@ -57,7 +56,13 @@ void JokeRequest::makeHoundifyRequest(QString line)
     request_info->setRequestID(request_id);
     request_info->setSessionID(session_id);
 
-    HoundServerJSON *hound_result = mRequester->do_text_request(line.toStdString().c_str(), nullptr, request_info, nullptr);
+    return request_info;
+}
+
+void JokeRequest::makeHoundifyTextRequest(QString line)
+{
+    init_salmoneye();
+    HoundServerJSON *hound_result = mRequester->do_text_request(line.toStdString().c_str(), nullptr, getRequestInfo(), nullptr);
     if(hound_result != nullptr && hound_result->hasAllResults()){
         CommandResultJSON *command = hound_result->elementOfAllResults(0);
         const char* soundHoundRespond = command->getWrittenResponse().c_str();
@@ -69,6 +74,38 @@ void JokeRequest::makeHoundifyRequest(QString line)
 
     } else{
         emit serverResponse(ERROR_MESSAGE);
+    }
+    cleanup_salmoneye();
+}
+
+void JokeRequest::makeHoundifyVoiceRequest(QString filename)
+{
+    init_salmoneye();
+    HoundRequester::VoiceRequest *request = mRequester->start_voice_request(nullptr, getRequestInfo());
+    FILE *audio_fp = fopen(filename.toStdString().substr(6).c_str(), "rb");
+    if (audio_fp == nullptr){
+        emit serverResponse(ERROR_MESSAGE);
+    } else{
+        while (true){
+            #define CHUNK_BYTE_COUNT 2052
+                unsigned char buffer[CHUNK_BYTE_COUNT];
+                size_t byte_count =
+                        fread(&(buffer[0]), 1, CHUNK_BYTE_COUNT, audio_fp);
+                if (byte_count > 0)
+                    request->add_audio(byte_count, &(buffer[0]));
+                if (byte_count < CHUNK_BYTE_COUNT)
+                    break;
+            #undef CHUNK_BYTE_COUNT
+        }
+        fclose(audio_fp);
+        HoundServerJSON *hound_result = request->finish();
+        if(hound_result != nullptr && hound_result->hasAllResults()){
+            CommandResultJSON *command = hound_result->elementOfAllResults(0);
+            const char* soundHoundRespond = command->getWrittenResponse().c_str();
+            emit serverResponse(soundHoundRespond);
+        } else{
+            emit serverResponse(ERROR_MESSAGE);
+        }
     }
     cleanup_salmoneye();
 }
